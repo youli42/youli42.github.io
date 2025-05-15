@@ -122,3 +122,9 @@ sitemap:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 启用图片
+images:
+    lazyload: false
+    prepend_root: true
+    post_asset: true
