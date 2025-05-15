@@ -13,7 +13,7 @@ importers:
         version: 7.3.0(chokidar@3.6.0)
       hexo-asset-image:
         specifier: git+https://github.com/xcodebuild/hexo-asset-image.git
-        version: git+https://github.com/xcodebuild/hexo-asset-image.git#3c114cf0c0343ab28469635085b225fcae7fb9d3
+        version: https://codeload.github.com/xcodebuild/hexo-asset-image/tar.gz/3c114cf0c0343ab28469635085b225fcae7fb9d3
       hexo-generator-archive:
         specifier: ^2.0.0
         version: 2.0.0
@@ -45,8 +45,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-kratos-rebirth:
-        specifier: 3.0.0-alpha.3
-        version: 3.0.0-alpha.3
+        specifier: 3.0.0-dev.9
+        version: 3.0.0-dev.9
       save:
         specifier: ^2.9.0
         version: 2.9.0
@@ -472,8 +472,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hexo-asset-image@git+https://github.com/xcodebuild/hexo-asset-image.git#3c114cf0c0343ab28469635085b225fcae7fb9d3:
-    resolution: {commit: 3c114cf0c0343ab28469635085b225fcae7fb9d3, repo: https://github.com/xcodebuild/hexo-asset-image.git, type: git}
+  hexo-asset-image@https://codeload.github.com/xcodebuild/hexo-asset-image/tar.gz/3c114cf0c0343ab28469635085b225fcae7fb9d3:
+    resolution: {tarball: https://codeload.github.com/xcodebuild/hexo-asset-image/tar.gz/3c114cf0c0343ab28469635085b225fcae7fb9d3}
     version: 0.0.5
 
   hexo-cli@4.3.2:
@@ -541,8 +541,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-kratos-rebirth@3.0.0-alpha.3:
-    resolution: {integrity: sha512-A+D/yMlMtOXbhzHylHVQUJNhd83dmAc6kc2RX8/m+eRpdZCJ2WBK+uGA0wOAYqgdGVopBoWZqwUKRIo+Yaz2OQ==}
+  hexo-theme-kratos-rebirth@3.0.0-dev.9:
+    resolution: {integrity: sha512-PdR9tKr+swxBFtqPz9xdx3yKfOWOSVujI4VV/wVzqQFVYOPy1skFYAcQkzwX1uWLWY37Ht3DcNPMr2SWhccmlg==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -1498,7 +1498,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hexo-asset-image@git+https://github.com/xcodebuild/hexo-asset-image.git#3c114cf0c0343ab28469635085b225fcae7fb9d3:
+  hexo-asset-image@https://codeload.github.com/xcodebuild/hexo-asset-image/tar.gz/3c114cf0c0343ab28469635085b225fcae7fb9d3:
     dependencies:
       cheerio: 0.19.0
       entities: 1.1.2
@@ -1604,7 +1604,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-kratos-rebirth@3.0.0-alpha.3: {}
+  hexo-theme-kratos-rebirth@3.0.0-dev.9: {}
 
   hexo-util@2.7.0:
     dependencies:
