@@ -120,11 +120,16 @@ sitemap:
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+# deploy:
+#   type: ''
 
-# 启用图片
-images:
-    lazyload: false
-    prepend_root: true
-    post_asset: true
+deploy:
+  type: git
+  repo: git@https://github.com/youli42/youli42.github.io.git
+  branch: main
+
+# # 启用图片
+# images:
+#     lazyload: false
+#     prepend_root: true
+#     post_asset: true
