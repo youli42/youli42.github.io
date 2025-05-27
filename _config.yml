@@ -115,7 +115,7 @@ feed:
 
 sitemap:
   path: sitemap.xml
-  template: ./sitemap_template.xml
+  #template: ./sitemap_template.xml
   rel: false
 
 # Deployment
@@ -128,7 +128,7 @@ deploy:
   repo: git@https://github.com/youli42/youli42.github.io.git
   branch: main
 
-# # 启用图片
+# # 启用图片（但是这个好像并没有正常生效）
 # images:
 #     lazyload: false
 #     prepend_root: true

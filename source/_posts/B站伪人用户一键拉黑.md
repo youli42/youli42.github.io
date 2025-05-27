@@ -4,6 +4,7 @@ categories: 脚本小工具
 tags:
   - JavaScript
   - bilibili
+  - 教程
 comments: true
 toc: true
 donate: true

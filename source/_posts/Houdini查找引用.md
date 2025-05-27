@@ -9,6 +9,8 @@ categories: Houdini
 tags:
     - Houdini
     - 奇怪的问题
+    - 教程
+cover: /posts/Houdini查找引用/Houdini_意外引用_报错弹窗.png
 ---
 记录一次查找意外引用的过程
 

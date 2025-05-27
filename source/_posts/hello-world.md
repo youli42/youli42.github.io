@@ -3,7 +3,8 @@ title: 你好，世界！
 date: 2025年05月15日
 categories: 碎碎念
 tags:
-sticky: 1
+    - 碎碎念
+#sticky: 1
 #cover:
 comments: true
 toc: true
