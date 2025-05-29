@@ -17,6 +17,8 @@ date: 2025-05-27 17:14:55
 cover: /posts/虚幻内容示例：VFX-Niagara-Advanced-Particles：FIllRenderTarget/FillRenderTarget_渲染效果.png
 ---
 
+> unreal版本：5.5.4
+
 # 概述
 
 这是 Niagara 系统模拟阶段的入门示例
@@ -39,7 +41,7 @@ cover: /posts/虚幻内容示例：VFX-Niagara-Advanced-Particles：FIllRenderTa
 
 > ## 启用模拟阶段
 > 
-> 在GPU粒子发射器中启用模拟阶段：于高级发射器属性中勾选"启用模拟阶段（Enable Simulation Stages）"
+> 在 ***GPU粒子发射器*** 中启用模拟阶段：于高级发射器属性中勾选"启用模拟阶段（Enable Simulation Stages）"
 > 
 > 注意：新版本中为，点击粒子上的添加阶段按钮，选择**添加模拟阶段**
 
