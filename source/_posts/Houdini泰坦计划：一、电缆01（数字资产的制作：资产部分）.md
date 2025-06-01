@@ -5,12 +5,12 @@ toc: true
 donate: true
 share: true
 date: 2025-05-21 23:06:42
-categories: Houdini
+categories: 
+   - [Houdini, 泰坦计划]
 tags:
-    - Houdini
-    - 泰坦计划
     - 笔记
 cover: /posts/Houdini泰坦计划：一、电缆01（数字资产的制作：资产部分）/Houdini_电缆效果示例.png
+excerpt: 在Houdini中制作电缆的关键知识点，基于泰坦计划第一部分
 ---
 
 > Houdini 版本：20.5.278

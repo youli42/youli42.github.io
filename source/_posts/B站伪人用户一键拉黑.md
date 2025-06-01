@@ -1,9 +1,8 @@
 ---
 title: B站伪人用户一键拉黑
-categories: 脚本小工具
+categories: 
+   - [脚本小工具, JavaScript]
 tags:
-  - JavaScript
-  - bilibili
   - 教程
 comments: true
 toc: true

@@ -1,13 +1,9 @@
 ---
 title: 虚幻内容示例：VFX-Niagara_Advanced_Particles：FIllRenderTarget
-categories: 虚幻内容示例
+categories: 
+    - [unreal, 内容示例, VFX, Niagara, Simulation]
 tags:
-  - unreal
-  - 虚幻内容示例
-  - VFX
-  - Niagara
   - 高级效果
-  - Niagara Simulation
   - 笔记
 comments: true
 toc: true

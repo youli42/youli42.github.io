@@ -1,10 +1,9 @@
 ---
 title: Houdini泰坦计划：一、电缆02（数字资产与联动UE）
-categories: Houdini
+categories: 
+   - [Houdini, 泰坦计划]
+   - [unreal, Houdini Engine]
 tags:
-  - Houdini
-  - 泰坦计划
-  - unreal
   - 笔记
   - 教程
 comments: true
@@ -187,3 +186,8 @@ Houdini 数字资产，即：Houdini Digital Assets（HDA），就是将已经�
 
 ![alt text](Houdini泰坦计划：一、电缆02（数字资产与联动UE）/Houdini_HDA参数_Basic.jpg)
 
+特别是，当你在与虚幻联动时修改了HDA的内容，想要保存，应当使用以上面板中的按键。
+
+### 更新UE中的HDA
+
+使用按钮更新了HDA后，应当右键HDA，选择重新载入。
