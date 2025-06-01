@@ -12,6 +12,7 @@ donate: true
 share: true
 cover: /posts/Houdini泰坦计划：一、电缆01（数字资产的制作：资产部分）/Houdini_电缆效果示例.png
 date: 2025-05-29 11:22:12
+excerpt: 通过HDA将工具导入UE，在虚幻引擎中使用Houdini Engine的功能。
 ---
 
 

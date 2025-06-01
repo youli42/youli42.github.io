@@ -11,6 +11,7 @@ donate: true
 share: true
 date: 2025-05-27 17:14:55
 cover: /posts/虚幻内容示例：VFX-Niagara-Advanced-Particles：FIllRenderTarget/FillRenderTarget_渲染效果.png
+excerpt: 对Niagara流体的基础部分（模拟阶段）的基本分析，模拟阶段可视为类似粒子更新（Particle Update）的附加逻辑堆栈。其核心差异在于支持迭代机制——即单帧内对容器内所有元素执行多次运算，类似于堆栈中的"For循环"结构。
 ---
 
 > unreal版本：5.5.4

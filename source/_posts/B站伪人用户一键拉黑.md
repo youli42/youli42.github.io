@@ -9,6 +9,7 @@ toc: true
 donate: true
 share: true
 date: 2025-05-15 15:48:45
+excerpt: 通过使用脚本，批量获取问题用户的BUID，同时进行批量拉黑操作。
 ---
 
 # 核心框架

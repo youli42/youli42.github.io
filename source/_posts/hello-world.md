@@ -7,6 +7,7 @@ tags:
 #cover:
 comments: true
 toc: true
+excerpt: 开始写博客
 ---
 
 使用 `Kratos : Rebirth`  Hexo 主题！配置，第一次接触js和node。
