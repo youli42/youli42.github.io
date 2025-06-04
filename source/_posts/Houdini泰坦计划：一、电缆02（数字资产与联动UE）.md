@@ -135,7 +135,7 @@ Houdini 数字资产，即：Houdini Digital Assets（HDA），就是将已经�
 
 设置好后，点击下方Apply进行保存，此时可以在储存目录（默认是：C:\Users\用户名\Documents\houdini20.5\otls）找到创建的.hda文件。
 
-# 3、将HDA导入UE
+# 三、将HDA导入UE
 
 ***确认已经正确安装Houdini Engine For Unreal插件，并启用它：***
 
@@ -145,7 +145,7 @@ Houdini 数字资产，即：Houdini Digital Assets（HDA），就是将已经�
 
 ![alt text](Houdini泰坦计划：一、电缆02（数字资产与联动UE）/Houdini_导入HDA.jpg)
 
-此时将HDA拖入场景中，可以看到HDA占位符：
+此时将 HDA 拖入场景中，可以看到 HDA 占位符：
 
 ![alt text](Houdini泰坦计划：一、电缆02（数字资产与联动UE）/Houdini_HDA在UE中样式.jpg)
 
@@ -155,8 +155,7 @@ Houdini 数字资产，即：Houdini Digital Assets（HDA），就是将已经�
 
 这里需要将 Houdini Inputs 中的输入数据类型设置为：`Curve Input | 曲线输入` ，然后就可以看到我们搭建的管道了
 
-# 4、联动插件与HDA的一些特性
-
+# 四、联动插件与HDA的一些特性
 
 
 ## 在houdini中查看UE场景
@@ -181,13 +180,13 @@ Houdini 数字资产，即：Houdini Digital Assets（HDA），就是将已经�
 
 ## 更新与保存HDA
 
-保存的HDA已经与该场景无关，此时使用Ctrl + S只会保存场景，无法更新HDA。
+保存的 HDA 已经与该场景无关，此时使用 Ctrl + S 只会保存场景，无法更新HDA。
 
 应该当在编辑面板中，重新选择应用应用HDA才能进行更新。
 
 ![alt text](Houdini泰坦计划：一、电缆02（数字资产与联动UE）/Houdini_HDA参数_Basic.jpg)
 
-特别是，当你在与虚幻联动时修改了HDA的内容，想要保存，应当使用以上面板中的按键。
+特别是，当你在与虚幻联动时修改了HDA的内容，想要保存，应当使用以上面板中的按键，并在UE中更新HDA。
 
 ### 更新UE中的HDA
 
