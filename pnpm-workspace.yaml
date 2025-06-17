@@ -1,5 +1,7 @@
+packages:
+  - packages/*
+  - other-directory/*
+ignoredBuiltDependencies:
+  - esbuild
 onlyBuiltDependencies:
   - hexo-util
-packages:
-  - 'packages/*'
-  - 'other-directory/*'
