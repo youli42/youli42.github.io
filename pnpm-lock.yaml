@@ -48,8 +48,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-kratos-rebirth:
-        specifier: 3.0.0-dev.9
-        version: 3.0.0-dev.9
+        specifier: 3.0.0-alpha.0
+        version: 3.0.0-alpha.0
       save:
         specifier: ^2.9.0
         version: 2.9.0
