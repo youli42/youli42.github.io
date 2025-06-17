@@ -20,6 +20,8 @@ excerpt: 通过HDA将工具导入UE，在虚幻引擎中使用Houdini Engine的�
 > 
 > SideFXLabs 版本：20.5.253
 >
+> HoudiniEngineForUnreal 版本：2.2.0
+> 
 > unreal版本：5.4.4
 
 # 开篇：泰坦计划
@@ -29,6 +31,16 @@ excerpt: 通过HDA将工具导入UE，在虚幻引擎中使用Houdini Engine的�
 
 - Houdini官方介绍：[Project Titan | SideFX](https://www.sidefx.com/titan/)
 - UE新闻：[“泰坦计划”示例游戏现已推出：探索这个巨大的开放世界](https://www.unrealengine.com/zh-CN/news/the-project-titan-sample-game-is-now-available-explore-this-huge-open-world)
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114579543694148&bvid=BV1QnjdzPE78&cid=30180313946&p=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"
+    width="100%" 
+    height="100%">
+</iframe>
 
 # 主要内容
 

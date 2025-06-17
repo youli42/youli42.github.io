@@ -25,6 +25,16 @@ excerpt: 在Houdini中制作电缆的关键知识点，基于泰坦计划第一�
 - Houdini官方介绍：[Project Titan | SideFX](https://www.sidefx.com/titan/)
 - UE新闻：[“泰坦计划”示例游戏现已推出：探索这个巨大的开放世界](https://www.unrealengine.com/zh-CN/news/the-project-titan-sample-game-is-now-available-explore-this-huge-open-world)
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114579543694148&bvid=BV1QnjdzPE78&cid=30180313946&p=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"
+    width="100%" 
+    height="100%">
+</iframe>
+
 # 第一部分：电缆
 制作目标
 ![Houdini_电缆效果示例](./Houdini泰坦计划：一、电缆01（数字资产的制作：资产部分）/Houdini_电缆效果示例.png)
