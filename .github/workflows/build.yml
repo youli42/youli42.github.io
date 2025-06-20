@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install Hexo environment
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
 
     - name: Hexo build site
       run: npx hexo generate --force
