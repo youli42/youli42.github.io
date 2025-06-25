@@ -1,17 +1,17 @@
 ---
-title: Houdini泰坦计划：二、散布工具
+title: "Houdini泰坦计划：二、散布工具"
 comments: true
 toc: true
 donate: true
 share: true
-date: 2025-06-17 11:58:35
+date: "2025-06-17 11:58:35"
 categories:
-  - [Houdini, 泰坦计划]
-  - [unreal, Houdini Engine]
+    - [Houdini, 泰坦计划]
+    - [unreal, Houdini Engine]
 tags:
-  - 笔记
-excerpt: 使用Data Table向Houdini中传递模型长宽数据，并在Houdini中进行散布，将结果作为带属性的点传递回UE，在UE中进行实例化成模型。泰坦计划的第二课。
-cover: /posts/Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具.png
+  - "笔记"
+excerpt: "使用Data Table向Houdini中传递模型长宽数据，并在Houdini中进行散布，将结果作为带属性的点传递回UE，在UE中进行实例化成模型。泰坦计划的第二课。"
+cover: "/posts/Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具.png"
 ---
 > Houdini 版本：20.5.278
 >
@@ -75,11 +75,11 @@ cover: /posts/Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二
 此时，每个完整拓扑结构的几何体都会有一个唯一的 Variant 属性值
 ### 2、指定点的属性
 1. 确定物体数量：
-  1. 目的：避免随机到没有被分配模型的值
-  2. 方法：使用上面 Connetivity 节点产生的 class 属性中的最大值作为随机数最大值
-2. 为每个点分配随机数：
-  1. 使用 Attribute Randomize 节点，对点的 Variant 属性进行随机
-  2. 同时使用离散（Discrete）模式，随机整数
+  2. 目的：避免随机到没有被分配模型的值
+  3. 方法：使用上面 Connetivity 节点产生的 class 属性中的最大值作为随机数最大值
+4. 为每个点分配随机数：
+  5. 使用 Attribute Randomize 节点，对点的 Variant 属性进行随机
+  6. 同时使用离散（Discrete）模式，随机整数
 ![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_3.png)
 其中的HScript脚本为：
 ```C
@@ -110,13 +110,13 @@ detail(-1, "max", 0) // 这里创建了备用输入，所以也可也这样写
 简单来说：将一片一片的对象打包到一个指定区域中，并尽可能提高二维空间的利用率
 
 ### 目的
-将模型用作打包对象，传入的 BaseBoundBox 边界框作为打包目标，将重叠的模型不重叠排布到平面上。
+使用 UV Layout打包片的能力，将传入物体视为被打包的对象，BaseBoundBox 边界框的底部作为打包的目标平面，进行**不重叠**的随机散布
 
 ### 调整参数
 
 | 1. UV Attribute：P，ZX Projection：打包对象设置为模型位置，并从俯视角打包<br>2. Variable Scaling - Island Scale Attribute：使用iscale作为模型大小的参数<br>3. Overrides - Axis Alignment：设置为none，保留旋转信息<br>4. Pack Into：Islands From Second Input：使用传入的模型作为打包目标<br>5. 勾选Variable Scaling - Island Scale Attire...：使用 iscale 属性调整模型大小<br>6. 将Packing - Scale 改成Fixed，数值设为1：避免节点为了排布所有模型，而缩小模型大小<br>7. Advanced - Search Resolution：分辨率，调小可以加快打包速度，但是空隙也会变大<br>8. **Targets** - UV Attribute：P，ZX Projection：打包对象设置为模型位置，并从俯视角打包<br>9.  Output Groups and Attributes - Nonpacked Polygons：勾选这个选项，可以将溢出部分分组，方便删除 | ![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_6.png) |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-### 注意点：
+### 注意点：散布数量问题
 如果撒点过多，可能会导致打包的时候模型溢出：
 ![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_7.png)
 此时已经勾选了 Output Groups and Attributes - Nonpacked Polygons 选项，可以直接使用 Blast 节点删除 nonpacked 组（也就是溢出部分）
@@ -163,7 +163,7 @@ detail(-1, "max", 0) // 这里创建了备用输入，所以也可也这样写
 ### 2. 聚类分组，生成二级基础平面
 1. 聚类：使用 `Cluster Points` 聚类点 节点，按照临近关系进行分组
 2. 创建平面：在循环中，对于每一个分组，用 `Shrinkwrap` 收缩包裹 创建平面![使用收缩包裹创建的平面](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_11.png)
-  1. 这里通过一个 Transform 对平面进行缩小，尽量避免模型出现悬空（实际是除非每个平面都是一个组，否则几乎无法缓解，只能通过模拟阶段解决）
+    1. 这里通过一个 Transform 对平面进行缩小，尽量避免模型出现悬空（实际是除非每个平面都是一个组，否则几乎无法缓解，只能通过模拟阶段解决）
 ![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_10.png)
 **节点参数**：
 - `Cluster Points` 聚类点：
@@ -181,8 +181,8 @@ UE 并没有传递整个模型到 Houdini 中，而是通过点的属性进行�
   - 会在该点位置创建该模型
 ### 创建思路
 1. 更正属性：通过重命名等，将属性转化成可以在UE中识别的名称
-  1. UVLayout 控制大小：`iscale` → UE控制模型大小：`pscale`
-  2. Data Table 传递过来的 Static Mesh 属性 → UE实例化模型属性：unreal_instance
+    1. UVLayout 控制大小：`iscale` → UE控制模型大小：`pscale`
+    2. Data Table 传递过来的 Static Mesh 属性 → UE实例化模型属性：unreal_instance
 2. 为每个模型创建居中的点：
 ```C
 // 也可也使用 Extract Centroid 提取质心节点
@@ -279,15 +279,17 @@ f@pscale = prim(0, "iscale", 0);
 2. 打包效果：根据 `Path Attribute` 和  `Name Attribute` 对模型进行分类打包，通常一个包只在属性列表（Geometry Spreadsheet）中显示一行，占用更少的性能。
 ## 4、模拟部分
 这里只使用了基础刚体模拟，故只写注意点。
-## 模拟时旋转错误
+### 模拟时旋转错误
 ![](Houdini泰坦计划：二、散布工具/堆叠工具问题记录_14.webp)
 - **旋转属性**：
   - RBD Bullet Solver 中作为旋转属性的是：torque
   - 以上散布时使用的旋转属性是：orient
 - 所以需要 Attribute Rename 更改属性名称为解算可以识别的名称。
 ![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_12.png)
-# 5、自定义属性可视化
-属性可视化
+## 5、自定义属性可视化
+新版本可以在 Node Info 中直接开启属性可视化选项，打开对应属性前面的开关即可：![](Houdini泰坦计划：二、散布工具/Houdini泰坦计划：二、散布工具_16.png)
+
+同时，虚幻提供了高度自定义的方法显示点的属性：
 ![](Houdini泰坦计划：二、散布工具/堆叠工具问题记录_10.png)
 
 # 遗留问题
