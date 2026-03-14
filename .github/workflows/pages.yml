@@ -20,6 +20,12 @@ jobs:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "22.15.1"
+      # --- 新增步骤：安装 Pandoc ---
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+      # ------------ ----------
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
